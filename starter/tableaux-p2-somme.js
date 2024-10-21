@@ -15,8 +15,34 @@ Version alternative (avec BONUS) :
 4. Affichez le message final : "… + … + … = …".
 */
 
+const nombres = [11, 3, 7, 2, 9, 10]
+console.log(`Voici mon tableau de nombre : ${nombres}`);
 
+let sommeEach = 0 ;
+nombres.forEach((nombre)=>sommeEach += nombre);
+console.log((`la somme des nombres est : ${sommeEach}`));
 
+let sommeFor = 0;
+for(let nombre of nombres){
+    sommeFor += nombre;
+}
+console.log((`la somme des nombres est : ${sommeFor}`));
 
+//BONUS
 
+let message ='';
+let somme = 0;
 
+for(let i =0; i<nombres.length; i++){
+    message +=nombres[i];
+    if(i < nombres.length -1){
+        message += "+";
+    }
+}
+
+for(let nombre of nombres){
+    somme +=nombre;
+}
+
+message += " = " + somme;
+console.log(message);

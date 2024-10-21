@@ -9,7 +9,7 @@ TABLEAUX - PRÉPA 4 : Date valide - version 3
 
 // Fonction pour vérifier si une année est bissextile
 function isBissextile(annee) {
-    // Code pour déterminer si 'annee' est bissextile
+    return (annee % 4 === 0 && annee % 100 !== 0) || (annee % 400 === 0);
 }
 
 // Fonction pour vérifier si une date est valide
